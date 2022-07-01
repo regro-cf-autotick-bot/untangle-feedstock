@@ -1,4 +1,4 @@
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 {% set name = "untangle" %}
 
 package:
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e7cfa1ad57707e6b74cfea8b9fc50f7cbe9bbaf18401cc9d72192002bcd80bcb
+  sha256: dda75a60bfe69d76f116c3aea91c478885d25288d798f290201daa1400c1b5d4
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -28,8 +28,8 @@ test:
 about:
   home: https://github.com/stchris/untangle
   license: MIT
-  license_file: 'LICENSE'
-  summary: 'Convert XML documents into Python objects.'
+  license_file: LICENSE
+  summary: Convert XML documents into Python objects.
   doc_url: https://untangle.readthedocs.io/en/latest/
 
 extra:
